@@ -56,7 +56,7 @@ def Diffraction(wavelength,ScreenSeperation,Numpoints,xPrimeMin,xPrimeMax,yPrime
     
     return intensity
 
-
+#The following creats a loop that allows the user to choose which part of the exercise they want to look at.
 MyInput = '0'
 while MyInput != 'q':
     MyInput=input('Enter a choice "a","b","c" or "q" to quit: ')
@@ -98,12 +98,16 @@ while MyInput != 'q':
             
             
         print('You have choosen part b. \nIn this section the diffraction pattern is generated for single slit diffraction.')
-        W=float(input('Choose a wavelength (nm): '))
+        W=float(input('Choose a wavelength (nm): ')) 
+        #500nm is a good choice
         Z=float(input('select a screen seperation (mm): '))
+        #5mm
         L=float(input('select a appeture size (mm): '))
+        #1mm
         Min=float(input('select the lowerbound of the x domain: '))
+        #-1
         Max=float(input('select the upperbound of the x domain: '))
-        
+        #1
         print('Please wait a moment while the intensity plots are generated. \n')
         slit_diffraction(Wavelength=W,ScreenSeperation=Z,Length=L,xmin=Min,xmax=Max,plot=True)
     
